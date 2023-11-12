@@ -27,7 +27,7 @@ pip install django-ipfs
 Configuration
 -------------
 
-By default `ipfs_storage` adds and pins content to an IPFS daemon running on localhost
+By default `django_ipfs.storage` adds and pins content to an IPFS daemon running on localhost
 and returns URLs pointing to the public <https://ipfs.io/ipfs/> HTTP Gateway
 
 To customise this, set the following variables in your `settings.py`:
@@ -51,7 +51,7 @@ Use IPFS as [Django's default file storage backend](https://docs.djangoproject.c
 ```python
 # settings.py
 
-DEFAULT_FILE_STORAGE = 'ipfs_storage.InterPlanetaryFileSystemStorage'
+DEFAULT_FILE_STORAGE = 'django_ipfs.storage.InterPlanetaryFileSystemStorage'
 
 IPFS_STORAGE_API_URL = 'http://localhost:5001/api/v0/'
 IPFS_STORAGE_GATEWAY_URL = 'http://localhost:8080/ipfs/'
